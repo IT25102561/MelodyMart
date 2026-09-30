@@ -1,0 +1,11 @@
+﻿# MelodyMart - 10 Musical Instruments Catalog Data
+ID: 1 | Code: MM-GTR-001 | Name: Yamaha F310 Acoustic Guitar - Natural Wood | Category: String Instruments | Brand: Yamaha | Price: 48500.00 | Discount: 5.0% | Stock: 15
+ID: 2 | Code: MM-KEY-002 | Name: Roland XPS-10 Expandable Synthesizer Keyboard | Category: Keyboards & Pianos | Brand: Roland | Price: 265000.00 | Discount: 8.0% | Stock: 8
+ID: 3 | Code: MM-DRM-003 | Name: Pearl Roadshow 5-Piece Complete Drum Kit - Jet Black | Category: Drums & Percussion | Brand: Pearl | Price: 320000.00 | Discount: 0.0% | Stock: 4
+ID: 4 | Code: MM-GTR-004 | Name: Fender Player Stratocaster Electric Guitar - 3-Color Sunburst | Category: String Instruments | Brand: Fender | Price: 285000.00 | Discount: 10.0% | Stock: 6
+ID: 5 | Code: MM-TRD-005 | Name: Sri Lankan Traditional Geta Beraya (Kandyan Drum) | Category: Traditional Sri Lankan | Brand: Hewisi Craft | Price: 42000.00 | Discount: 0.0% | Stock: 12
+ID: 6 | Code: MM-TRD-006 | Name: Sri Lankan Traditional Yak Beraya (Low Country / Ruhunu Drum) | Category: Traditional Sri Lankan | Brand: Ruhunu Kala | Price: 38500.00 | Discount: 0.0% | Stock: 7
+ID: 7 | Code: MM-WND-007 | Name: Yamaha YFL-222 Standard Flute - Silver-Plated | Category: Wind Instruments | Brand: Yamaha | Price: 85000.00 | Discount: 5.0% | Stock: 9
+ID: 8 | Code: MM-BAS-008 | Name: Ibanez GSR200 4-String Active Bass Guitar - Walnut Flat | Category: String Instruments | Brand: Ibanez | Price: 115000.00 | Discount: 7.0% | Stock: 10
+ID: 9 | Code: MM-VLN-009 | Name: Stentor Student I Violin 4/4 Full Outfit with Bow & Case | Category: String Instruments | Brand: Stentor | Price: 54000.00 | Discount: 0.0% | Stock: 11
+ID: 10 | Code: MM-WND-010 | Name: Sri Lankan Handcrafted Bamboo Flute (Bansuri / Puluwa) | Category: Wind Instruments | Brand: Lanka Laya | Price: 6500.00 | Discount: 0.0% | Stock: 25

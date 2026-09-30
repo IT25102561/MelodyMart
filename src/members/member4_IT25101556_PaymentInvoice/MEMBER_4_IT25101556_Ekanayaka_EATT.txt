@@ -1,0 +1,69 @@
+﻿================================================================================
+SLIIT - FACULTY OF COMPUTING
+SE2030 - Software Engineering (Year 2, Semester 1 - 2026)
+MelodyMart: Web-Based Musical Instrument Selling System
+Harmony Lanka Musical Stores (Pvt) Ltd.
+Group: 2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+STUDENT DETAILS:
+Name:      Ekanayaka E. A. T. T.
+IT Number: IT25101556
+Module:    6.4 - Payment Gateway & Invoice System
+
+ASSIGNED CRUD OPERATIONS:
+[CREATE]
+- Initiate transaction records across multiple payment channels:
+  * Credit/Debit Cards (Visa & Mastercard)
+  * Bank Transfer slips (BOC, Commercial Bank, Sampath Bank)
+  * Sri Lankan Digital Wallets (FriMi, eZ Cash, Genie)
+  * Cash on Delivery (COD)
+- Auto-generate itemized tax e-invoices with 8% VAT breakdown, warranty terms, and billing address.
+
+[READ]
+- Track real-time payment states (Pending, Paid, Failed, Refunded).
+- Download and print official PDF-ready tax e-invoices (with print stylesheet support).
+- Access customer transaction histories for financial auditing.
+
+[UPDATE]
+- Update transaction status following manual bank slip review or payment gateway simulation (e.g. approve PENDING slip to PAID).
+- Record processed refund details with timestamps and reason logging.
+
+[DELETE]
+- Void failed or unverified payment attempts.
+- Archive obsolete billing records and cancel invalidated draft invoices.
+
+--------------------------------------------------------------------------------
+ASSIGNED 3 VALIDATION & BUSINESS ERRORS:
+--------------------------------------------------------------------------------
+1. Error Code: ERR_PAY_INVALID_AMOUNT
+   Name:      Non-Positive Transaction Value Error
+   Condition: Attempting to initiate a payment transaction of zero or negative LKR.
+   Message:   "ERR_PAY_INVALID_AMOUNT: Payment amount must be positive."
+
+2. Error Code: ERR_PAY_METHOD_REQUIRED
+   Name:      Unspecified Payment Channel Omission
+   Condition: Submitting checkout without choosing an active Sri Lankan payment method.
+   Message:   "ERR_PAY_METHOD_REQUIRED: Please select a valid Sri Lankan payment method."
+
+3. Error Code: ERR_PAY_UNVERIFIED_SLIP
+   Name:      Missing Bank Slip Attachment
+   Condition: Bank Transfer payment selected without providing deposit slip reference.
+   Message:   "ERR_PAY_UNVERIFIED_SLIP: Please attach a bank deposit receipt slip reference."
+
+--------------------------------------------------------------------------------
+JAVA ARCHITECTURE (IntelliJ IDEA / Tomcat 9):
+--------------------------------------------------------------------------------
+- Servlet:     src/main/java/controllers/PaymentServlet.java (Mappings: /payment, /invoice)
+- DAO:         src/main/java/dao/PaymentDAO.java
+- Models:      src/main/java/models/Payment.java, src/main/java/models/Invoice.java
+- Views (JSP): src/main/webapp/invoice.jsp
+- Text Data:   payments.txt, invoices.txt
+
+VIVA DEMONSTRATION STEPS:
+1. Complete checkout choosing "Direct Bank Transfer" and deposit slip receipt name.
+2. In Admin portal -> Tab 4 (Payments & Invoices), observe status as "PENDING".
+3. Click "Approve" button to advance status to "PAID".
+4. Open the official Tax Invoice (/invoice?orderId=ORD-2026-1002) and review the 8% VAT breakdown and Harmony Lanka letterhead.
+5. Demonstrate refund logging by clicking "Refund" and reviewing updated status.
+================================================================================

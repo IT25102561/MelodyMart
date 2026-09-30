@@ -1,0 +1,74 @@
+﻿================================================================================
+SRI LANKA INSTITUTE OF INFORMATION TECHNOLOGY (SLIIT)
+MODULE: SE2030 - SOFTWARE ENGINEERING (YEAR 2, SEMESTER 1 - 2026)
+PROJECT: WEB-BASED MUSICAL INSTRUMENT SELLING SYSTEM - "MelodyMart"
+COMPANY: HARMONY LANKA MUSICAL STORES (PVT) LTD.
+GROUP:   2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+GROUP MEMBERS & ASSIGNED CRUD OPERATION SPECIFICATIONS:
+--------------------------------------------------------------------------------
+6.1 User Account & Profile Management
+    Student Name: Perera D. A. P. W.
+    IT Number:    IT25101726
+    [CREATE]: Register new customer and staff accounts with SHA-256 hashing; add shipping/billing addresses.
+    [READ]:   View customer profiles, fetch stored address books, view session history, retrieve role permissions.
+    [UPDATE]: Edit personal details, update passwords, set primary shipping destinations, modify staff roles.
+    [DELETE]: Remove saved addresses from profile, deactivate customer accounts, terminate staff records.
+    [ERRORS]: ERR_USER_DUPLICATE_EMAIL, ERR_USER_PASSWORD_STRENGTH, ERR_USER_INVALID_PHONE.
+    [FILES]:  UserServlet.java, UserDAO.java, User.java, Address.java, profile.jsp, login.jsp, register.jsp.
+
+6.2 Product Catalog & Advanced Search/Filtering
+    Student Name: Senarathna U. G. S. P.
+    IT Number:    IT25102561
+    [CREATE]: Add musical instruments with technical specs, media galleries, LKR pricing, warranties, brands.
+    [READ]:   Browse by category, execute multi-faceted filters (brand/price/specs), render comparison matrices.
+    [UPDATE]: Modify product descriptions, update prices and active discounts, revise specs, adjust display order.
+    [DELETE]: Delist discontinued musical gear, delete obsolete categories, soft-delete archived products.
+    [ERRORS]: ERR_PROD_INVALID_NAME, ERR_PROD_INVALID_PRICE, ERR_PROD_INVALID_DISCOUNT.
+    [FILES]:  ProductServlet.java, ProductDAO.java, Product.java, catalog.jsp, product_details.jsp.
+
+6.3 Shopping Cart, Checkout & Payment
+    Student Name: Pavishanth K.
+    IT Number:    IT25103636
+    [CREATE]: Add instruments to cart, create customer checkout sessions, apply promo vouchers (MELODY10, AVURUDU15).
+    [READ]:   Retrieve cart contents, inspect dynamic subtotal, delivery fee by Sri Lankan district, pre-checkout summary.
+    [UPDATE]: Adjust item quantities, change selected shipping options, modify/remove applied voucher codes.
+    [DELETE]: Remove individual instrument line items from cart or clear entire cart.
+    [ERRORS]: ERR_CART_INVALID_QTY, ERR_CART_INSUFFICIENT_STOCK, ERR_CART_INVALID_VOUCHER.
+    [FILES]:  CartServlet.java, CheckoutServlet.java, CartDAO.java, Cart.java, CartItem.java, cart.jsp, checkout.jsp.
+
+6.4 Payment Gateway & Invoice System
+    Student Name: Ekanayaka E. A. T. T.
+    IT Number:    IT25101556
+    [CREATE]: Initiate transactions (Cards, Bank Transfer slips, FriMi/eZ Cash, COD); auto-generate VAT e-invoices.
+    [READ]:   Track payment states (Pending, Paid, Failed, Refunded), download official PDF tax invoices, audit history.
+    [UPDATE]: Update transaction status following bank slip review or gateway simulation, record refund details.
+    [DELETE]: Void failed or unverified payment attempts, archive obsolete billing records, cancel draft invoices.
+    [ERRORS]: ERR_PAY_INVALID_AMOUNT, ERR_PAY_METHOD_REQUIRED, ERR_PAY_UNVERIFIED_SLIP.
+    [FILES]:  PaymentServlet.java, PaymentDAO.java, Payment.java, Invoice.java, invoice.jsp.
+
+6.5 Real-Time Inventory & Supplier Management
+    Student Name: Premasiri R. M. R. R.
+    IT Number:    IT25103441
+    [CREATE]: Register instrument suppliers, generate stock purchase orders (POs), record incoming stock batches.
+    [READ]:   Monitor live warehouse stock levels, review automated low-stock and reorder alerts (<10 units).
+    [UPDATE]: Automatically deduct available stock on checkout, adjust stock for returns/damage, update supplier details.
+    [DELETE]: Deactivate discontinued supplier profiles and cancel draft or invalid purchase order requisitions.
+    [ERRORS]: ERR_SUP_INVALID_NAME, ERR_SUP_INVALID_EMAIL, ERR_PO_INVALID_AMOUNTS.
+    [FILES]:  InventorySupplierServlet.java, SupplierDAO.java, Supplier.java, PurchaseOrder.java, admin_dashboard.jsp.
+
+6.6 Order Fulfilment, Delivery Tracking & Returns
+    Student Name: Nellampitiya T. T.
+    IT Number:    IT25100652
+    [CREATE]: Create dispatch jobs, assign partner courier tracking (Koombiyo, Domex, Pronto), submit returns.
+    [READ]:   Track delivery lifecycle statuses (Processing, Shipped, In-Transit, Delivered), review courier logs.
+    [UPDATE]: Update fulfillment status, record Cash-on-Delivery (COD) collections, advance return ticket stages.
+    [DELETE]: Cancel dispatch orders prior to courier handover, dismiss invalid or withdrawn return requests.
+    [ERRORS]: ERR_DISP_ORDER_REQUIRED, ERR_RET_ORDER_REQUIRED, ERR_RET_REASON_REQUIRED.
+    [FILES]:  OrderFulfillmentServlet.java, FulfillmentDAO.java, Fulfillment.java, ReturnRequest.java, order_tracking.jsp, returns.jsp.
+
+================================================================================
+ORDER PERSISTENCE:
+- Every order placed is recorded in memory and permanently saved to `orders.txt`.
+================================================================================

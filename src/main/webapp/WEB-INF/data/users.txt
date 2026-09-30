@@ -1,0 +1,7 @@
+﻿# MelodyMart - Users Registry Data
+ID: 1 | Name: Kasun Jayasinghe | Email: admin@melodymart.lk | Phone: 0771234567 | Role: ADMIN | Status: ACTIVE
+ID: 2 | Name: Nimal Perera | Email: sales@melodymart.lk | Phone: 0712345678 | Role: SALES_STAFF | Status: ACTIVE
+ID: 3 | Name: Ruwan Ekanayake | Email: inventory@melodymart.lk | Phone: 0763456789 | Role: INVENTORY_STAFF | Status: ACTIVE
+ID: 4 | Name: Chathuri Wickramasinghe | Email: finance@melodymart.lk | Phone: 0754567890 | Role: FINANCE_STAFF | Status: ACTIVE
+ID: 5 | Name: Amila Silva | Email: amila.silva@gmail.com | Phone: 0778899001 | Role: CUSTOMER | Status: ACTIVE
+ID: 6 | Name: Dinuka Fernando | Email: dinuka.f@yahoo.com | Phone: 0789900112 | Role: CUSTOMER | Status: ACTIVE

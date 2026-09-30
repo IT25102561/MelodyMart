@@ -1,0 +1,67 @@
+﻿================================================================================
+SLIIT - FACULTY OF COMPUTING
+SE2030 - Software Engineering (Year 2, Semester 1 - 2026)
+MelodyMart: Web-Based Musical Instrument Selling System
+Harmony Lanka Musical Stores (Pvt) Ltd.
+Group: 2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+STUDENT DETAILS:
+Name:      Premasiri R. M. R. R.
+IT Number: IT25103441
+Module:    6.5 - Real-Time Inventory & Supplier Management
+
+ASSIGNED CRUD OPERATIONS:
+[CREATE]
+- Register new musical instrument suppliers (local artisans in Kurunegala/Kandy and international distributors in Singapore/Japan).
+- Generate stock purchase orders (POs) with item summaries, quantities, and expected delivery dates.
+- Record incoming stock batches with warranty verification.
+
+[READ]
+- Monitor live warehouse stock levels across all 10 musical instruments.
+- Review automated low-stock and reorder alerts (< 10 units in stock).
+- Inspect supplier performance and purchase order fulfillment records.
+
+[UPDATE]
+- Automatically deduct available stock in real time upon customer checkout completion.
+- Adjust warehouse stock counts for returns, breakages, or damages.
+- Update supplier contact information, delivery agreements, and active status.
+
+[DELETE]
+- Deactivate discontinued supplier profiles.
+- Cancel draft or invalid purchase order requisitions.
+
+--------------------------------------------------------------------------------
+ASSIGNED 3 VALIDATION & BUSINESS ERRORS:
+--------------------------------------------------------------------------------
+1. Error Code: ERR_SUP_INVALID_NAME
+   Name:      Omitted Supplier Company Name Error
+   Condition: Attempting to register a vendor without a registered trading company name.
+   Message:   "ERR_SUP_INVALID_NAME: Supplier company name is required."
+
+2. Error Code: ERR_SUP_INVALID_EMAIL
+   Name:      Malformed Supplier Email Address
+   Condition: Supplier contact email fails basic RFC email format syntax validation.
+   Message:   "ERR_SUP_INVALID_EMAIL: Valid contact email is required."
+
+3. Error Code: ERR_PO_INVALID_AMOUNTS
+   Name:      Non-Positive Purchase Order Quantity/Valuation
+   Condition: Requisition submitted with zero quantity or non-positive total cost.
+   Message:   "ERR_PO_INVALID_AMOUNTS: Quantity and total amount must be positive."
+
+--------------------------------------------------------------------------------
+JAVA ARCHITECTURE (IntelliJ IDEA / Tomcat 9):
+--------------------------------------------------------------------------------
+- Servlet:     src/main/java/controllers/InventorySupplierServlet.java (Mappings: /inventory, /suppliers)
+- DAO:         src/main/java/dao/SupplierDAO.java
+- Models:      src/main/java/models/Supplier.java, src/main/java/models/PurchaseOrder.java
+- Views (JSP): Admin Tab 5 (/admin?tab=inventory)
+- Text Data:   suppliers.txt
+
+VIVA DEMONSTRATION STEPS:
+1. Open Admin Portal -> Tab 5 (Inventory & Suppliers).
+2. View the automated Low-Stock Alert banner displaying items with <= 8 units.
+3. Observe live suppliers: Lanka Music Distributors Ltd., Upcountry Artisans Guild, Yamaha Asia Pacific.
+4. Issue a new Purchase Order for Traditional Drums, verify it appears in POs list.
+5. Place a customer order in the shop, then return to Tab 5 to demonstrate automatic stock deduction!
+================================================================================

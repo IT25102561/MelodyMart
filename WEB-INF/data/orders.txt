@@ -1,0 +1,80 @@
+ID: #11 | Code: MM-STR-011 | Name: Yamaha Pacifica 112V Electric Guitar - Sonic Blue | Category: String Instruments | Price: LKR 145000.0 | Stock: 12
+--------------------------------------------------------------------------------
+ORDER ID:         ORD-2026-1003
+ORDER DATE:       2026-09-14 19:04:39
+CUSTOMER:         Amila Silva (Phone: 0778899001, Email: amila.silva@gmail.com)
+DELIVERY ADDRESS: 12/A, Peradeniya Road, Kandy, Kandy (Sri Lanka)
+COURIER PARTNER:  Koombiyo Delivery [Tracking: KB-LK-879564]
+ITEMS PURCHASED:
+  - Yamaha Pacifica 112V Electric Guitar - Special Edition White | Qty: 2 | Unit: LKR 129,200.00 | Subtotal: LKR 258,400.00
+SUBTOTAL:         LKR 258,400.00
+DELIVERY FEE:     LKR 750.00
+TOTAL AMOUNT:     LKR 259,150.00
+PAYMENT METHOD:   CREDIT_CARD (Status: PAID)
+FULFILLMENT:      PROCESSING
+
+--------------------------------------------------------------------------------
+ID: #12 | Code: MM-STR-012 | Name: Yamaha Pacifica 112V Electric Guitar - Sonic Blue | Category: String Instruments | Price: LKR 145000.0 | Stock: 12
+--------------------------------------------------------------------------------
+ORDER ID:         ORD-2026-1004
+ORDER DATE:       2026-09-14 19:05:09
+CUSTOMER:         Amila Silva (Phone: 0778899001, Email: amila.silva@gmail.com)
+DELIVERY ADDRESS: 12/A, Peradeniya Road, Kandy, Kandy (Sri Lanka)
+COURIER PARTNER:  Koombiyo Delivery [Tracking: KB-LK-909668]
+ITEMS PURCHASED:
+  - Yamaha Pacifica 112V Electric Guitar - Special Edition White | Qty: 2 | Unit: LKR 129,200.00 | Subtotal: LKR 258,400.00
+SUBTOTAL:         LKR 258,400.00
+DELIVERY FEE:     LKR 750.00
+TOTAL AMOUNT:     LKR 259,150.00
+PAYMENT METHOD:   CREDIT_CARD (Status: PAID)
+FULFILLMENT:      PROCESSING
+
+--------------------------------------------------------------------------------
+ID: #13 | Code: MM-STR-013 | Name: Yamaha Pacifica 112V Electric Guitar - Sonic Blue | Category: String Instruments | Price: LKR 145000.0 | Stock: 12
+--------------------------------------------------------------------------------
+ORDER ID:         ORD-2026-1005
+ORDER DATE:       2026-09-14 19:05:47
+CUSTOMER:         Amila Silva (Phone: 0778899001, Email: amila.silva@gmail.com)
+DELIVERY ADDRESS: 12/A, Peradeniya Road, Kandy, Kandy (Sri Lanka)
+COURIER PARTNER:  Koombiyo Delivery [Tracking: KB-LK-947655]
+ITEMS PURCHASED:
+  - Yamaha Pacifica 112V Electric Guitar - Special Edition White | Qty: 2 | Unit: LKR 129,200.00 | Subtotal: LKR 258,400.00
+SUBTOTAL:         LKR 258,400.00
+DELIVERY FEE:     LKR 750.00
+TOTAL AMOUNT:     LKR 259,150.00
+PAYMENT METHOD:   CREDIT_CARD (Status: PAID)
+FULFILLMENT:      PROCESSING
+
+--------------------------------------------------------------------------------
+ID: #14 | Code: MM-STR-014 | Name: Yamaha Pacifica 112V Electric Guitar - Sonic Blue | Category: String Instruments | Price: LKR 145000.0 | Stock: 12
+--------------------------------------------------------------------------------
+ORDER ID:         ORD-2026-1006
+ORDER DATE:       2026-09-14 19:06:19
+CUSTOMER:         Amila Silva (Phone: 0778899001, Email: amila.silva@gmail.com)
+DELIVERY ADDRESS: 12/A, Peradeniya Road, Kandy, Kandy (Sri Lanka)
+COURIER PARTNER:  Koombiyo Delivery [Tracking: KB-LK-979367]
+ITEMS PURCHASED:
+  - Yamaha Pacifica 112V Electric Guitar - Special Edition White | Qty: 2 | Unit: LKR 129,200.00 | Subtotal: LKR 258,400.00
+SUBTOTAL:         LKR 258,400.00
+DELIVERY FEE:     LKR 750.00
+TOTAL AMOUNT:     LKR 259,150.00
+PAYMENT METHOD:   CREDIT_CARD (Status: PAID)
+FULFILLMENT:      PROCESSING
+
+--------------------------------------------------------------------------------
+ID: #15 | Code: MM-STR-015 | Name: Yamaha Pacifica 112V Electric Guitar - Sonic Blue | Category: String Instruments | Price: LKR 145000.0 | Stock: 12
+--------------------------------------------------------------------------------
+ORDER ID:         ORD-2026-1007
+ORDER DATE:       2026-09-20 19:05:51
+CUSTOMER:         Amila Silva (Phone: 0778899001, Email: amila.silva@gmail.com)
+DELIVERY ADDRESS: 12/A, Peradeniya Road, Kandy, Kandy (Sri Lanka)
+COURIER PARTNER:  Koombiyo Delivery [Tracking: KB-LK-351470]
+ITEMS PURCHASED:
+  - Yamaha Pacifica 112V Electric Guitar - Special Edition White | Qty: 2 | Unit: LKR 129,200.00 | Subtotal: LKR 258,400.00
+SUBTOTAL:         LKR 258,400.00
+DELIVERY FEE:     LKR 750.00
+TOTAL AMOUNT:     LKR 259,150.00
+PAYMENT METHOD:   CREDIT_CARD (Status: PAID)
+FULFILLMENT:      PROCESSING
+
+--------------------------------------------------------------------------------

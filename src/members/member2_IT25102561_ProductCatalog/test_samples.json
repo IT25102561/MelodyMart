@@ -1,0 +1,39 @@
+{
+  "studentName": "Senarathna U. G. S. P.",
+  "itNumber": "IT25102561",
+  "module": "6.2 Product Catalog & Advanced Search/Filtering",
+  "crudSummary": {
+    "create": "Add new musical instruments with technical specifications, high-resolution media galleries, retail pricing (LKR), warranty policies, and brand taxonomy.",
+    "read": "Browse instruments by category, execute multi-faceted filters (brand, price bracket, specifications), and render side-by-side instrument comparison matrices.",
+    "update": "Modify product descriptions, update prices and active promotional discounts, revise technical specs, and adjust display order/media.",
+    "delete": "Delist discontinued musical gear, delete obsolete categories, or soft-delete archived products from public visibility."
+  },
+  "assignedErrors": [
+    {
+      "code": "ERR_PROD_INVALID_PRICE",
+      "name": "Invalid Price or Discount Boundary",
+      "condition": "Triggered when retail price is non-numeric, zero, or negative, or when promotional discount price exceeds the retail price.",
+      "message": "Retail price must be greater than zero, and discount price cannot be negative or exceed the retail price."
+    },
+    {
+      "code": "ERR_PROD_MISSING_SPECS",
+      "name": "Missing Mandatory Technical Specifications",
+      "condition": "Triggered when adding or updating an instrument without required technical specifications (material, dimensions, pickups, voices, or tuning).",
+      "message": "Technical specifications are mandatory for musical instruments (e.g., material, dimensions, voices, or pickup setup)."
+    },
+    {
+      "code": "ERR_PROD_COMPARE_LIMIT",
+      "name": "Comparison Matrix Capacity Exceeded",
+      "condition": "Triggered when a user requests a side-by-side comparison of more than 4 musical instruments concurrently.",
+      "message": "Instrument comparison is limited to a maximum of 4 instruments side-by-side."
+    }
+  ],
+  "endpointsTested": [
+    "GET /api/products - Browse and search catalog with category, brand, price filters",
+    "GET /api/products/:id - Retrieve full instrument details and specifications",
+    "POST /api/products - Add new musical instrument to catalog",
+    "PUT /api/products/:id - Update descriptions, pricing, discounts, and specs",
+    "DELETE /api/products/:id - Delist/soft-delete instrument from public view",
+    "POST /api/products/compare - Generate side-by-side comparison matrix (max 4)"
+  ]
+}

@@ -1,0 +1,67 @@
+﻿================================================================================
+SLIIT - FACULTY OF COMPUTING
+SE2030 - Software Engineering (Year 2, Semester 1 - 2026)
+MelodyMart: Web-Based Musical Instrument Selling System
+Harmony Lanka Musical Stores (Pvt) Ltd.
+Group: 2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+STUDENT DETAILS:
+Name:      Nellampitiya T. T.
+IT Number: IT25100652
+Module:    6.6 - Order Fulfilment, Delivery Tracking & Returns
+
+ASSIGNED CRUD OPERATIONS:
+[CREATE]
+- Create fulfillment dispatch jobs upon order placement.
+- Assign partner courier tracking identifiers (Koombiyo Delivery, Domex Express, Pronto Logistics).
+- Submit customer return or warranty claim requests with defect classifications.
+
+[READ]
+- Track real-time delivery lifecycle statuses (Processing, Shipped, In-Transit, Delivered) with visual 4-step progress timeline.
+- Review courier dispatch logs and customer delivery notes.
+- Inspect pending customer return and warranty claim tickets.
+
+[UPDATE]
+- Update order fulfillment status across delivery milestones.
+- Record Cash-on-Delivery (COD) collection milestones (Pending Cash -> Collected by Courier).
+- Advance return ticket stages (Under Review, Approved, Completed, Rejected) with officer resolution notes.
+
+[DELETE]
+- Cancel dispatch orders prior to courier handover.
+- Dismiss invalid or withdrawn customer return/warranty requests.
+
+--------------------------------------------------------------------------------
+ASSIGNED 3 VALIDATION & BUSINESS ERRORS:
+--------------------------------------------------------------------------------
+1. Error Code: ERR_DISP_ORDER_REQUIRED
+   Name:      Missing Order Reference for Dispatch
+   Condition: Dispatch job creation attempted without linking to a valid Order ID.
+   Message:   "ERR_DISP_ORDER_REQUIRED: Order ID is required for courier dispatch."
+
+2. Error Code: ERR_RET_ORDER_REQUIRED
+   Name:      Unlinked Return Ticket Submission
+   Condition: Return claim ticket submitted without a verifiable Order ID.
+   Message:   "ERR_RET_ORDER_REQUIRED: Order ID is required for return ticket."
+
+3. Error Code: ERR_RET_REASON_REQUIRED
+   Name:      Unclassified Warranty/Return Claim
+   Condition: Return submission attempted without selecting a recognized defect reason category.
+   Message:   "ERR_RET_REASON_REQUIRED: Please select a return or warranty reason."
+
+--------------------------------------------------------------------------------
+JAVA ARCHITECTURE (IntelliJ IDEA / Tomcat 9):
+--------------------------------------------------------------------------------
+- Servlet:     src/main/java/controllers/OrderFulfillmentServlet.java (Mappings: /fulfillment, /track, /returns)
+- DAO:         src/main/java/dao/FulfillmentDAO.java
+- Models:      src/main/java/models/Fulfillment.java, src/main/java/models/ReturnRequest.java
+- Views (JSP): src/main/webapp/order_tracking.jsp, src/main/webapp/returns.jsp
+- Text Data:   fulfillments.txt, returns.txt
+
+VIVA DEMONSTRATION STEPS:
+1. Open http://localhost:8080/MelodyMart/track and enter tracking code: KB-COL-998821.
+2. Observe 4-step timeline showing "DELIVERED" and Koombiyo Delivery details.
+3. Track an in-transit order (DX-GAL-443312) displaying "IN_TRANSIT".
+4. Open returns.jsp, submit a claim ticket for a sound defect, observe ticket creation.
+5. In Admin portal -> Tab 6 (Fulfillment & Returns), update delivery status to "DELIVERED" and advance return ticket stage to "APPROVED".
+================================================================================

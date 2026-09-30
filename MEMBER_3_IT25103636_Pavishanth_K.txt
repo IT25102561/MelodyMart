@@ -1,0 +1,69 @@
+﻿================================================================================
+SLIIT - FACULTY OF COMPUTING
+SE2030 - Software Engineering (Year 2, Semester 1 - 2026)
+MelodyMart: Web-Based Musical Instrument Selling System
+Harmony Lanka Musical Stores (Pvt) Ltd.
+Group: 2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+STUDENT DETAILS:
+Name:      Pavishanth K.
+IT Number: IT25103636
+Module:    6.3 - Shopping Cart, Checkout & Payment
+
+ASSIGNED CRUD OPERATIONS:
+[CREATE]
+- Add instruments to the active shopping cart session with quantity constraints.
+- Create customer checkout sessions with recipient details and Sri Lankan delivery addresses.
+- Apply valid promotional vouchers (e.g., MELODY10, AVURUDU15, SLIIT2026) or bundle discounts.
+
+[READ]
+- Retrieve cart contents and display live line items.
+- Inspect dynamic subtotal, discount, and Sri Lankan district-based delivery fee calculations (Colombo, Kandy, Galle, Jaffna).
+- View pre-checkout order summaries prior to payment initiation.
+
+[UPDATE]
+- Adjust product quantities in the cart (+/- update or direct input).
+- Change selected shipping options (Standard Courier, Express Domex, Store Pickup).
+- Modify or remove applied voucher codes before payment initiation.
+
+[DELETE]
+- Remove individual instrument line items from the shopping cart.
+- Clear the entire cart upon order cancellation or successful checkout completion.
+
+--------------------------------------------------------------------------------
+ASSIGNED 3 VALIDATION & BUSINESS ERRORS:
+--------------------------------------------------------------------------------
+1. Error Code: ERR_CART_INVALID_QTY
+   Name:      Non-Positive Cart Quantity Rejection
+   Condition: Entering quantity of zero or negative integers for cart items.
+   Message:   "ERR_CART_INVALID_QTY: Quantity must be at least 1."
+
+2. Error Code: ERR_CART_INSUFFICIENT_STOCK
+   Name:      Warehouse Stock Exceeded Breach
+   Condition: Attempting to add more units of an instrument than available in warehouse stock.
+   Message:   "ERR_CART_INSUFFICIENT_STOCK: Only [X] units available in warehouse."
+
+3. Error Code: ERR_CART_INVALID_VOUCHER
+   Name:      Unrecognized or Expired Voucher Code
+   Condition: Customer submits an expired or non-existent promotional coupon.
+   Message:   "ERR_CART_INVALID_VOUCHER: Promo voucher '[code]' is expired or invalid."
+
+--------------------------------------------------------------------------------
+JAVA ARCHITECTURE (IntelliJ IDEA / Tomcat 9):
+--------------------------------------------------------------------------------
+- Servlets:    src/main/java/controllers/CartServlet.java (Mapping: /cart)
+               src/main/java/controllers/CheckoutServlet.java (Mapping: /checkout)
+- DAO:         src/main/java/dao/CartDAO.java
+- Models:      src/main/java/models/Cart.java, src/main/java/models/CartItem.java
+- Views (JSP): src/main/webapp/cart.jsp, src/main/webapp/checkout.jsp
+- Text Data:   cart_sample.txt, orders.txt (Order Persistence)
+
+VIVA DEMONSTRATION STEPS:
+1. Open http://localhost:8080/MelodyMart/products and click "Add to Cart" on Yamaha F310.
+2. In cart.jsp, update quantity to 2, verify subtotal recalculates in LKR.
+3. Test voucher validation: enter "INVALID99" -> triggers ERR_CART_INVALID_VOUCHER.
+4. Enter "MELODY10" -> displays 10% promotional discount deduction.
+5. Change District dropdown from "Colombo" (LKR 500) to "Kandy" (LKR 750), verify dynamic fee update.
+6. Click "Proceed to Checkout", complete checkout, verify order is saved to orders.txt.
+================================================================================

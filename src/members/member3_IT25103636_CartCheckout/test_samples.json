@@ -1,0 +1,37 @@
+{
+  "studentName": "Pavishanth K.",
+  "itNumber": "IT25103636",
+  "module": "6.3 Shopping Cart, Checkout & Payment",
+  "crudSummary": {
+    "create": "Add instruments to the active shopping cart, create customer checkout sessions, and apply valid promotional vouchers or bundle discounts.",
+    "read": "Retrieve cart contents, inspect dynamic subtotal and delivery fee calculations (Western Province vs Outstation in LKR), and view pre-checkout order summaries.",
+    "update": "Adjust product quantities in the cart, change selected shipping options, and modify or remove applied voucher codes before payment initiation.",
+    "delete": "Remove individual instrument line items from the shopping cart or clear the entire cart upon order cancellation or checkout completion."
+  },
+  "assignedErrors": [
+    {
+      "code": "ERR_CART_STOCK_EXCEEDED",
+      "name": "Requested Quantity Exceeds Available Warehouse Stock",
+      "condition": "Triggered when customer attempts to add or update an item quantity greater than live inventory balance.",
+      "message": "Only [X] unit(s) of \"[Instrument Name]\" available in stock. You requested [Y]."
+    },
+    {
+      "code": "ERR_CART_INVALID_VOUCHER",
+      "name": "Invalid, Expired, or Sub-Threshold Coupon Code",
+      "condition": "Triggered when an entered coupon code is not found in the active coupons database, has expired, or does not meet the minimum order subtotal requirement.",
+      "message": "Coupon code is invalid or has expired. Or minimum spend threshold (e.g. Rs. 20,000 for MELODY10) not reached."
+    },
+    {
+      "code": "ERR_CART_EMPTY_CHECKOUT",
+      "name": "Empty Cart Checkout Session Initiation Attempt",
+      "condition": "Triggered when a checkout session is initiated with zero instrument items in the active cart.",
+      "message": "Cannot initiate checkout with an empty cart. Please add musical instruments before proceeding."
+    }
+  ],
+  "endpointsTested": [
+    "POST /api/cart/validate-item - Real-time stock validation prior to cart addition/update",
+    "POST /api/cart/validate-coupon - Verify and apply promo codes (MELODY10, NEWYEAR26)",
+    "POST /api/cart/calculate - Dynamic subtotal, Sri Lanka delivery fee, tax calculation",
+    "POST /api/cart/checkout-session - Initialize checkout session with active cart"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "studentName": "Nellampitiya T. T.",
+  "itNumber": "IT25100652",
+  "module": "6.6 Order Fulfilment, Delivery Tracking & Returns",
+  "crudSummary": {
+    "create": "Create fulfillment dispatch jobs, assign partner courier tracking identifiers, and submit customer return or warranty claim requests.",
+    "read": "Track real-time delivery lifecycle statuses (Processing, Shipped, In-Transit, Delivered), review courier logs, and inspect pending customer returns.",
+    "update": "Update order fulfillment status, record Cash-on-Delivery (COD) collection milestones, and advance return ticket stages (Under Review, Approved, Completed).",
+    "delete": "Cancel dispatch orders prior to courier handover and dismiss invalid or withdrawn customer return requests."
+  },
+  "assignedErrors": [
+    {
+      "code": "ERR_DELIV_INVALID_TRACKING",
+      "name": "Invalid Courier Tracking Identifier Format",
+      "condition": "Triggered when dispatch tracking identifier format is invalid or courier partner is unselected (Expected KB-LK-XXXXX, PX-LK-XXXXX, or DX-COL-XXXXX).",
+      "message": "Tracking identifier format invalid. Expected format: KB-LK-XXXXX, PX-LK-XXXXX, or DX-COL-XXXXX."
+    },
+    {
+      "code": "ERR_DELIV_ILLEGAL_STATE_TRANSITION",
+      "name": "Illegal Delivery Lifecycle State Transition",
+      "condition": "Triggered when attempting to transition an order status illegally (e.g., from 'Processing' directly to 'Delivered' without dispatch).",
+      "message": "Illegal delivery lifecycle transition from \"Processing\" to \"Delivered\". Lifecycle must follow: Processing -> Shipped -> In-Transit -> Delivered."
+    },
+    {
+      "code": "ERR_RET_WINDOW_EXPIRED",
+      "name": "Expired Return Window or Unfulfilled Order Claim",
+      "condition": "Triggered when a customer submits a return or warranty inspection for an order that has not yet been delivered or whose 14-day warranty claim window has elapsed.",
+      "message": "Cannot submit return/warranty claim for order \"MM-2026-1003\". The order status is currently \"Processing\". Returns are only permitted after successful delivery."
+    }
+  ],
+  "endpointsTested": [
+    "GET /api/orders - List persistent saved orders with customer and status filters",
+    "POST /api/orders - Save new customer order, coordinate stock, invoices, and dispatch",
+    "GET /api/fulfillments - List courier dispatch records (Koombiyo, PromptX, Domex)",
+    "GET /api/fulfillments/:orderId - Fetch delivery checkpoints and live tracking timeline",
+    "POST /api/fulfillments/dispatch - Assign courier partner and tracking identifier",
+    "PUT /api/fulfillments/:dispatchId/status - Advance lifecycle (Shipped, In-Transit, Delivered)",
+    "POST /api/returns - Submit customer return / warranty claim ticket",
+    "GET /api/returns - View list of warranty inspection tickets",
+    "PUT /api/returns/:ticketId - Advance ticket stage (Under Review -> Approved -> Completed)",
+    "DELETE /api/returns/:ticketId - Dismiss invalid return ticket"
+  ]
+}

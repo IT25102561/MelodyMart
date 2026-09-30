@@ -1,0 +1,4 @@
+﻿# MelodyMart - Suppliers Registry Data
+ID: 1 | Code: SUP-LKA-001 | Company: Lanka Music Distributors Ltd. | Contact: Sunil Shantha | Phone: 0112845678 | Categories: String Instruments, Keyboards | Status: Active
+ID: 2 | Code: SUP-LKA-002 | Company: Upcountry Artisans Guild | Contact: K. B. Wijeratne | Phone: 0812384567 | Categories: Traditional Sri Lankan Drums, Flutes | Status: Active
+ID: 3 | Code: SUP-SGP-003 | Company: Yamaha Asia Pacific Pte Ltd | Contact: David Tan | Phone: +6567409200 | Categories: Pianos, Keyboards, Brass & Flutes | Status: Active

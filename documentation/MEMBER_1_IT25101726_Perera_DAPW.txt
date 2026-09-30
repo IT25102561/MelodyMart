@@ -1,0 +1,67 @@
+﻿================================================================================
+SLIIT - FACULTY OF COMPUTING
+SE2030 - Software Engineering (Year 2, Semester 1 - 2026)
+MelodyMart: Web-Based Musical Instrument Selling System
+Harmony Lanka Musical Stores (Pvt) Ltd.
+Group: 2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+STUDENT DETAILS:
+Name:      Perera D. A. P. W.
+IT Number: IT25101726
+Module:    6.1 - User Account & Profile Management
+
+ASSIGNED CRUD OPERATIONS:
+[CREATE]
+- Register new customer and staff user accounts with secure SHA-256 password hashing.
+- Add new shipping, billing, and contact addresses to the user's address book (Colombo, Gampaha, Kandy, Galle, etc.).
+
+[READ]
+- View customer profile details (ID, full name, email, phone, role, status).
+- Fetch stored address books with primary delivery destination indicators.
+- View login session history and role-based permissions (CUSTOMER, SALES_STAFF, INVENTORY_STAFF, FINANCE_STAFF, ADMIN).
+
+[UPDATE]
+- Edit personal profile details (full name, Sri Lankan mobile phone).
+- Update account passwords with complexity validation (minimum 8 characters with letters & numbers).
+- Set primary shipping destination for quick checkout.
+- Modify assigned staff roles and active/inactive status.
+
+[DELETE]
+- Remove saved addresses from profile address book.
+- Deactivate customer accounts upon user request or staff administration.
+
+--------------------------------------------------------------------------------
+ASSIGNED 3 VALIDATION & BUSINESS ERRORS:
+--------------------------------------------------------------------------------
+1. Error Code: ERR_USER_DUPLICATE_EMAIL
+   Name:      Duplicate Email Registration Conflict
+   Condition: Triggered when registering with an email already present in the user database.
+   Message:   "ERR_USER_DUPLICATE_EMAIL: An account with email '[email]' is already registered."
+
+2. Error Code: ERR_USER_PASSWORD_STRENGTH
+   Name:      Password Complexity Policy Violation
+   Condition: Password submitted has fewer than 8 characters or lacks both letters and digits.
+   Message:   "ERR_USER_PASSWORD_STRENGTH: Password must be at least 8 characters long and contain both letters and numbers."
+
+3. Error Code: ERR_USER_INVALID_PHONE
+   Name:      Invalid Sri Lankan Mobile Format
+   Condition: Phone number does not conform to Sri Lankan telecommunication standards (07XXXXXXXX or +947XXXXXXXX).
+   Message:   "ERR_USER_INVALID_PHONE: Invalid Sri Lankan mobile format. Expected 07XXXXXXXX or +947XXXXXXXX."
+
+--------------------------------------------------------------------------------
+JAVA ARCHITECTURE (IntelliJ IDEA / Tomcat 9):
+--------------------------------------------------------------------------------
+- Servlet:     src/main/java/controllers/UserServlet.java  (Mapping: /user)
+- DAO:         src/main/java/dao/UserDAO.java
+- Models:      src/main/java/models/User.java, src/main/java/models/Address.java
+- Views (JSP): src/main/webapp/profile.jsp, src/main/webapp/login.jsp, src/main/webapp/register.jsp
+- Text Data:   orders.txt, users.txt
+
+VIVA DEMONSTRATION STEPS:
+1. Run application on Apache Tomcat 9: http://localhost:8080/MelodyMart/
+2. Register a new user with invalid phone to demonstrate ERR_USER_INVALID_PHONE.
+3. Register successfully with "0771234567" and "Secret@123".
+4. Log into profile.jsp, add a new delivery address in Kandy, and set as primary.
+5. Delete an address, edit name, and test account deactivation.
+================================================================================

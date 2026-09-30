@@ -1,0 +1,40 @@
+{
+  "studentName": "Premasiri R. M. R. R.",
+  "itNumber": "IT25103441",
+  "module": "6.5 Real-Time Inventory & Supplier Management",
+  "crudSummary": {
+    "create": "Register new instrument suppliers, generate stock purchase orders (POs), and record incoming stock batches with warranty batches.",
+    "read": "Monitor live warehouse stock levels, review automated low-stock and reorder alerts, and inspect supplier performance records.",
+    "update": "Automatically deduct available stock on checkout, adjust stock counts for returns or damages, and update supplier contract/contact details.",
+    "delete": "Deactivate discontinued supplier profiles and cancel draft or invalid purchase order requisitions."
+  },
+  "assignedErrors": [
+    {
+      "code": "ERR_SUPP_DUPLICATE_BRN",
+      "name": "Duplicate Supplier Business Registration Number",
+      "condition": "Triggered when attempting to register a supplier with a Business Registration Number (BRN) already present in the database.",
+      "message": "Supplier with Business Registration Number \"PV-10928/LK\" is already registered in the system."
+    },
+    {
+      "code": "ERR_INV_INVALID_PO_QTY",
+      "name": "Non-Positive Purchase Order Quantity Requisition",
+      "condition": "Triggered when creating a purchase order requisition with a quantity less than or equal to zero.",
+      "message": "Purchase order quantity must be greater than zero. Received: 0"
+    },
+    {
+      "code": "ERR_INV_NEGATIVE_STOCK_DEFICIT",
+      "name": "Physical Stock Balance Deficit",
+      "condition": "Triggered when a manual or damaged inventory adjustment causes warehouse stock to drop below zero.",
+      "message": "Stock adjustment rejected. Current stock is 4, deduction of 50 would result in negative stock balance (-46)."
+    }
+  ],
+  "endpointsTested": [
+    "GET /api/inventory/status - Real-time warehouse balance, low stock alerts, stock valuation",
+    "POST /api/inventory/adjust - Adjust stock for damages, returns, or manual audits",
+    "POST /api/inventory/purchase-order - Create PO and record incoming stock batch",
+    "GET /api/suppliers - List registered suppliers with ratings and contract statuses",
+    "POST /api/suppliers - Register new musical equipment supplier",
+    "PUT /api/suppliers/:id - Update supplier contracts and contact details",
+    "DELETE /api/suppliers/:id - Suspend/deactivate supplier agreement"
+  ]
+}

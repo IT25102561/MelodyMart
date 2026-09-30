@@ -1,0 +1,79 @@
+﻿================================================================================
+SLIIT - FACULTY OF COMPUTING
+SE2030 - Software Engineering (Year 2, Semester 1 - 2026)
+MelodyMart: Web-Based Musical Instrument Selling System
+Harmony Lanka Musical Stores (Pvt) Ltd.
+Group: 2026-Y2-S1-MLB-B6G1-08
+================================================================================
+
+STUDENT DETAILS:
+Name:      Senarathna U. G. S. P.
+IT Number: IT25102561
+Module:    6.2 - Product Catalog & Advanced Search/Filtering
+
+ASSIGNED CRUD OPERATIONS:
+[CREATE]
+- Add new musical instruments with technical specifications, high-resolution media galleries, retail pricing in LKR, warranty policies, and brand taxonomy.
+
+[READ]
+- Browse instruments by category (String, Keyboards, Drums, Wind, Traditional Sri Lankan).
+- Execute multi-faceted filters (brand, price bracket, specifications).
+- Render detailed instrument specifications and side-by-side comparison matrices.
+
+[UPDATE]
+- Modify product descriptions, update prices (LKR) and active promotional discount percentages.
+- Revise technical specs and adjust display order/media image URLs.
+- Real-time stock decrement sync upon customer checkout.
+
+[DELETE]
+- Delist discontinued musical gear, delete obsolete categories, or soft-delete archived products from public visibility.
+
+--------------------------------------------------------------------------------
+10 PRE-LOADED AUTHENTIC MUSICAL INSTRUMENTS IN SRI LANKA:
+--------------------------------------------------------------------------------
+1.  Yamaha F310 Acoustic Guitar - Natural Wood (LKR 48,500.00 | 5% OFF)
+2.  Roland XPS-10 Expandable Synthesizer Keyboard (LKR 265,000.00 | 8% OFF)
+3.  Pearl Roadshow 5-Piece Complete Drum Kit - Jet Black (LKR 320,000.00)
+4.  Fender Player Stratocaster Electric Guitar - Sunburst (LKR 285,000.00 | 10% OFF)
+5.  Sri Lankan Traditional Geta Beraya (Kandyan Drum) - Jak Wood & Deer Hide (LKR 42,000.00)
+6.  Sri Lankan Traditional Yak Beraya (Low Country Drum) - Kithul Trunk (LKR 38,500.00)
+7.  Yamaha YFL-222 Standard Flute - Silver-Plated (LKR 85,000.00 | 5% OFF)
+8.  Ibanez GSR200 4-String Active Bass Guitar - Walnut Flat (LKR 115,000.00 | 7% OFF)
+9.  Stentor Student I Violin 4/4 Full Outfit with Case & Bow (LKR 54,000.00)
+10. Sri Lankan Handcrafted Bamboo Flute (Bansuri / Puluwa) (LKR 6,500.00)
+
+--------------------------------------------------------------------------------
+ASSIGNED 3 VALIDATION & BUSINESS ERRORS:
+--------------------------------------------------------------------------------
+1. Error Code: ERR_PROD_INVALID_NAME
+   Name:      Blank Product Name Validation Error
+   Condition: Attempting to publish an instrument listing with an empty or whitespace name.
+   Message:   "ERR_PROD_INVALID_NAME: Product name cannot be blank."
+
+2. Error Code: ERR_PROD_INVALID_PRICE
+   Name:      Non-Positive Retail Price Error
+   Condition: Pricing set to less than or equal to LKR 0.00.
+   Message:   "ERR_PROD_INVALID_PRICE: Product retail price must be greater than zero."
+
+3. Error Code: ERR_PROD_INVALID_DISCOUNT
+   Name:      Promotional Discount Range Policy Violation
+   Condition: Discount percentage configured below 0% or exceeding 100%.
+   Message:   "ERR_PROD_INVALID_DISCOUNT: Promotional discount percentage must be between 0% and 100%."
+
+--------------------------------------------------------------------------------
+JAVA ARCHITECTURE (IntelliJ IDEA / Tomcat 9):
+--------------------------------------------------------------------------------
+- Servlet:     src/main/java/controllers/ProductServlet.java (Mappings: /products, /product-detail)
+- DAO:         src/main/java/dao/ProductDAO.java
+- Models:      src/main/java/models/Product.java
+- Views (JSP): src/main/webapp/catalog.jsp, src/main/webapp/product_details.jsp
+- Text Data:   products.txt
+
+VIVA DEMONSTRATION STEPS:
+1. Navigate to http://localhost:8080/MelodyMart/products to view 10 pre-loaded instruments.
+2. Filter by Category: "Traditional Sri Lankan" (displays Geta Beraya and Yak Beraya).
+3. Filter by Brand: "Yamaha", set price range LKR 40,000 to LKR 90,000.
+4. Add New Instrument: Go to Admin Portal -> Tab 2 (Products) -> Enter product details and click "Save & Publish". Product is immediately inserted into the relational database!
+5. Update Entered Instrument (CRUD UPDATE): Click "Edit" on any newly entered or existing product, change pricing, discount %, or stock quantity, and click "Save Changes in Database".
+6. Verify persistence: Reload the page or query the database directly to confirm the update is permanently saved.
+================================================================================

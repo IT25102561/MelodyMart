@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>MelodyMart - Web-Based Musical Instrument Selling System</display-name>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlets -->
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>controllers.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProductServlet</servlet-name>
+        <servlet-class>controllers.ProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProductServlet</servlet-name>
+        <url-pattern>/products</url-pattern>
+        <url-pattern>/product-detail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CartServlet</servlet-name>
+        <servlet-class>controllers.CartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CartServlet</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>controllers.CheckoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/checkout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>controllers.PaymentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/payment</url-pattern>
+        <url-pattern>/invoice</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InventorySupplierServlet</servlet-name>
+        <servlet-class>controllers.InventorySupplierServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InventorySupplierServlet</servlet-name>
+        <url-pattern>/inventory</url-pattern>
+        <url-pattern>/suppliers</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderFulfillmentServlet</servlet-name>
+        <servlet-class>controllers.OrderFulfillmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderFulfillmentServlet</servlet-name>
+        <url-pattern>/fulfillment</url-pattern>
+        <url-pattern>/track</url-pattern>
+        <url-pattern>/returns</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OrderServlet</servlet-name>
+        <servlet-class>controllers.OrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OrderServlet</servlet-name>
+        <url-pattern>/orders</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>controllers.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>60</session-timeout>
+    </session-config>
+
+</web-app>
